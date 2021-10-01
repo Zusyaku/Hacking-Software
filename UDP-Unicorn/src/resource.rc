@@ -1,0 +1,172 @@
+/*
+ *  A Win32 UDP flooding utility for penetration testing
+ *  Copyright (C) 2011  unixunited@live.com
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <afxres.h>
+
+#include "resource.h"
+
+// visual theming
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "UDPUnicorn.exe.manifest"
+
+// icons
+IDI_MAIN        ICON DISCARDABLE "icons\\mainicon.ico"
+IDI_IDLE        ICON DISCARDABLE "icons\\idle.ico"
+IDI_ATTACKING   ICON DISCARDABLE "icons\\attacking.ico"
+IDI_MUSIC       ICON DISCARDABLE "icons\\music.ico"
+
+// menu
+IDR_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Reset Fields", IDR_FILE_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "Quit\tAlt+F4", IDR_FILE_QUIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Always On Top", IDR_OP_TOP
+        MENUITEM "&Hide When Minimized", IDR_OP_MIN_TRAY
+        POPUP "&Background Color"
+        BEGIN
+            MENUITEM "&Change Background Color", IDR_OP_BGCOLOR
+            MENUITEM SEPARATOR
+            MENUITEM "&Reset", IDR_OP_RESETBG
+        END
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Active Connections", IDR_TOOLS_CONNECT
+        MENUITEM "&Port Scanner", IDR_TOOLS_PORTSCAN
+        MENUITEM "&Network Info", IDR_TOOLS_NETINFO
+        MENUITEM SEPARATOR
+        MENUITEM "&Port List (Online)", IDR_TOOLS_PORTLIST
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Port Scanner Options", IDR_OP_PORTSCAN
+        MENUITEM SEPARATOR
+        MENUITEM "&Config", IDR_OP_CONFIG
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&FAQ", IDR_HELP_FAQ
+        MENUITEM SEPARATOR
+        MENUITEM "&About", IDR_HELP_ABOUT
+    END
+END
+
+// main dialog
+LANGUAGE 0, SUBLANG_NEUTRAL
+DLG_MAIN DIALOG DISCARDABLE 0, 0, 327, 323
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_FIXEDSYS | WS_VISIBLE |
+    WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP | WS_SYSMENU | WS_MINIMIZEBOX
+CAPTION "UDP Unicorn"
+FONT 8, UNICORN_FONT
+{
+    GROUPBOX        "", IDC_STATIC, 5, 1, 316, 219
+    LTEXT           "Target:", IDC_STATIC, 33, 24, 25, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_TARGET, 64, 22, 122, 12, ES_AUTOHSCROLL
+    LTEXT           "Port:", IDC_STATIC, 214, 24, 17, 8, SS_LEFT
+    COMBOBOX        IDC_EDT_PORT, 237, 22, 77, 42, CBS_DROPDOWN | ES_AUTOHSCROLL | WS_TABSTOP
+    LTEXT           "Packet Size:", IDC_STATIC, 11, 55, 40, 8, SS_LEFT
+    CONTROL         "", IDC_TB_SIZE, TRACKBAR_CLASS, TBS_HORZ | TBS_NOTICKS, 51, 54, 203, 14
+    EDITTEXT        IDC_EDT_SIZE, 258, 54, 43, 12, NOT WS_TABSTOP | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "KB", IDC_STATIC, 306, 56, 10, 8
+    CHECKBOX        "Random Size", IDC_CHK_RANDSIZE, 259, 69, 57, 11, BS_AUTOCHECKBOX
+    LTEXT           "Delay:", IDC_STATIC, 125, 89, 22, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_DELAY, 152, 87, 36, 12, ES_AUTOHSCROLL
+    LTEXT           "ms", IDC_STATIC, 196, 89, 10, 8, SS_LEFT
+    LTEXT           "Threads:", IDC_STATIC, 117, 116, 30, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_THREADS, 152, 114, 36, 12, ES_AUTOHSCROLL
+    LTEXT           "Sockets per Thread:", IDC_STATIC, 79, 146, 70, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_SOCKETS, 152, 144, 36, 12, ES_AUTOHSCROLL
+    PUSHBUTTON      "&Ping Target", IDC_BTN_TEST, 34, 173, 60, 16
+    EDITTEXT        IDC_EDT_TEST, 102, 175, 192, 12, NOT WS_TABSTOP | ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&DNS", IDC_BTN_DNS, 34, 193, 60, 16
+    EDITTEXT        IDC_EDT_DNS, 102, 195, 192, 12, NOT WS_TABSTOP | ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Attack", IDC_BTN_ATTACK, 107, 234, 114, 35
+    LTEXT           "Data Sent:", IDC_STATIC, 28, 286, 36, 8, SS_LEFT
+    EDITTEXT        IDC_EDT_DATASENT, 66, 284, 181, 12, NOT WS_TABSTOP | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "KB", IDC_STATIC, 251, 286, 9, 8, SS_LEFT
+    PUSHBUTTON      "Reset", IDC_BTN_RESETDATA, 268, 283, 32, 13
+    PUSHBUTTON      "", IDC_BTN_MUSIC, 267, 110, 35, 32, BS_ICON | NOT WS_TABSTOP
+    ICON            IDI_IDLE, IDC_ICO_LEFTI, 43, 242, 32, 32, SS_ICON
+    ICON            IDI_ATTACKING, IDC_ICO_LEFTA, 43, 242, 32, 32, SS_ICON
+    ICON            IDI_IDLE, IDC_ICO_RIGHTI, 263, 242, 32, 32, SS_ICON
+    ICON            IDI_ATTACKING, IDC_ICO_RIGHTA, 263, 242, 32, 32, SS_ICON
+}
+
+// filter dialog
+LANGUAGE 0, SUBLANG_NEUTRAL
+DLG_FILTER DIALOG 0, 0, 184, 51
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_CAPTION | WS_VISIBLE | WS_POPUP
+CAPTION "Filter Port"
+FONT 8, UNICORN_FONT
+{
+    DEFPUSHBUTTON   "OK", IDOK, 129, 32, 50, 14
+    PUSHBUTTON      "Cancel", IDCANCEL, 76, 32, 50, 14
+    LTEXT           "Filter Port:", IDC_STATIC, 12, 14, 39, 8, SS_LEFT
+    EDITTEXT        IDC_FILTER_EDT_PORT, 52, 12, 120, 12, ES_AUTOHSCROLL | ES_NUMBER
+}
+
+// port scanner options
+LANGUAGE 0, SUBLANG_NEUTRAL
+DLG_PS_OP DIALOG 0, 0, 184, 51
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_CAPTION | WS_VISIBLE | WS_POPUP
+CAPTION "Port Scanner Options"
+FONT 8, UNICORN_FONT
+{
+    DEFPUSHBUTTON   "OK", IDOK, 129, 32, 50, 14
+    PUSHBUTTON      "Cancel", IDCANCEL, 76, 32, 50, 14
+    LTEXT           "Port range:", IDC_STATIC, 12, 14, 39, 8, SS_LEFT
+    EDITTEXT        IDC_PS_OP_EDT1, 52, 12, 50, 12, ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "-", IDC_STATIC, 107, 13, 10, 12
+    EDITTEXT        IDC_PS_OP_EDT2, 116, 12, 50, 12, ES_AUTOHSCROLL | ES_NUMBER
+}
+
+// network information
+LANGUAGE 0, SUBLANG_NEUTRAL
+DLG_NETINFO DIALOG 0, 0, 200, 98
+STYLE DS_3DLOOK | DS_CENTER | DS_MODALFRAME | DS_SHELLFONT | WS_CAPTION | WS_VISIBLE | WS_POPUP | WS_SYSMENU
+CAPTION "Network Info"
+FONT 8, UNICORN_FONT
+{
+    LTEXT           "Local Hostname:", IDC_STATIC, 9, 14, 100, 8, SS_LEFT
+    LTEXT           "Private IP Address:", IDC_STATIC, 9, 34, 100, 8, SS_LEFT
+    LTEXT           "Public IP Address:", IDC_STATIC, 9, 54, 100, 8, SS_LEFT
+    LTEXT           "MAC Address:", IDC_STATIC, 9, 74, 100, 8, SS_LEFT
+    EDITTEXT        IDC_NETINFO_EDT1, 89, 13, 101, 12, ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_NETINFO_EDT2, 89, 33, 101, 12, ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_NETINFO_EDT3, 89, 53, 101, 12, ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_NETINFO_EDT4, 89, 73, 101, 12, ES_AUTOHSCROLL | ES_READONLY
+}
+
+// about dialog
+DLG_ABOUT DIALOG DISCARDABLE 32, 32, 180, 142
+CAPTION "About"
+FONT 9, UNICORN_FONT
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+BEGIN
+    DEFPUSHBUTTON "OK", IDOK, 66, 118, 50, 14
+    ICON IDI_MAIN, IDC_STATIC, 81, 12, 32, 32
+    CTEXT "..:: UDP Unicorn v2.0 ::..", IDC_STATIC, 7, 42, 166, 8
+    CTEXT "UDP Flooder for Security Testing", IDC_STATIC, 7, 62, 166, 8
+    CTEXT "(C) Sparky, 2011", IDC_STATIC, 7, 81, 166, 8
+    CONTROL "<A HREF="""">http://udpunicorn.sourceforge.net/</A>", IDC_ABOUT_LINK, WC_LINK, WS_VISIBLE | WS_CHILD, 36, 98, 200, 8
+END
