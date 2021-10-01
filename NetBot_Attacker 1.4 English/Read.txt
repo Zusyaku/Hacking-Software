@@ -1,0 +1,40 @@
+
+NetBot_Attacker 1.4 English version
+
+By:Security warning team(www.hackeroo.com)Development
+
+Function on :
+
+NetBot_Attacker Is a comprehensive pressure as well as the DDOS test attack
+
+He may control the most PC computer to start DDOS to attack!
+
+The main attack type has:
+
+Ordinary attack:  SYN Flood,ICMP Flood,UDP Flood,UDP small,TCP Flood,TCP multi-link
+
+WEB Attack:HTTP No-Cache Get Flood,CC Variety attack,HTTPGET
+
+Special attack: GAME attack,CIDR attack,Hybrid attack
+
+Auxiliary function::
+
+Download operation,Shutdown unloading,Open URL,All shutdown
+
+Help:You only need to have the FTP space and may use it,
+
+Or you are fixed IP,Or your free application dynamic domain name.
+
+
+The thanks supports NetBot_Attacker,We also opened the VIP edition.
+
+VIP service of edition end little, EXE WROM, U records of spread, Intranet travel, attack might to be further loud .
+
+
+°²È«¾¯½äÏß(Security warning team) www.hackeroo.com
+
+Buy VIP edition connection MSN:hackeroo@hotmail.com
+
+
+
+

@@ -1,0 +1,20 @@
+ProDoS v1.0 by 0v3rd0z3r aka SatansWrath (HF).
+
+Coded in C++.
+
+
+
+How to use:
+--------------------------------------------
+1. Enter the victim's IP address or a webhost in the IP field.
+2. Enter the port you would like to flood (Default - 80).
+3. Press OK, Enjoy.
+--------------------------------------------
+
+I am NOT responsible for your actions, and what you do with this program. Education purposes only, thank you.
+
+
+Note: This program is twice as powerful then LOIC or ServerAttack, so be careful with it.
+
+
+# All rights reserved. #
