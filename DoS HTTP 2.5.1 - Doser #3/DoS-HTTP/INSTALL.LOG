@@ -1,0 +1,48 @@
+***  Installation Started 02/10/2012 19:23  ***
+Title: DoSHTTP 2.5 Installation
+Source: E:\DOCUME~1\SimboL\LOCALS~1\Temp\Rar$EXa0.040\DoSHTTP 2.5.1 - WWW.GODFILMES.COM\doshttp_setup WWW.GODFILMES.COM.exe
+Made Dir: E:\Program Files\Socketsoft
+Made Dir: E:\Program Files\Socketsoft\DoS-HTTP
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\UNWISE.EXE
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\DoSHTTP 2.5.1
+RegDB Val: DoSHTTP 2.5.1
+RegDB Name: DisplayName
+RegDB Root: 2
+RegDB Old: DoSHTTP 2.5.1
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\DoSHTTP 2.5.1
+RegDB Val: E:\PROGRA~1\SOCKET~1\DoS-HTTP\UNWISE.EXE E:\PROGRA~1\SOCKET~1\DoS-HTTP\INSTALL.LOG
+RegDB Name: UninstallString
+RegDB Root: 2
+RegDB Old: E:\PROGRA~1\SOCKET~1\DoS-HTTP\UNWISE.EXE E:\PROGRA~1\SOCKET~1\DoS-HTTP\INSTALL.LOG
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\DoSHTTP.exe
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\CONFIG.dat
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\UA.cfg
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\LicenseAgreement.txt
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\LicenseAgreement.rtf
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\UserGuide.txt
+File Copy: E:\Program Files\Socketsoft\DoS-HTTP\UserGuide.rtf
+Shell Link: E:\Documents and Settings\All Users\Start Menu\Programs\Socketsoft\DoSHTTP 2.5.lnk
+Shell Link: E:\Documents and Settings\All Users\Start Menu\Programs\Socketsoft\User Guide.lnk
+Shell Link: E:\Documents and Settings\All Users\Start Menu\Programs\Socketsoft\License Agreement.lnk
+Shell Link: E:\Documents and Settings\All Users\Desktop\DoSHTTP 2.5.lnk
+Shell Link: E:\Documents and Settings\SimboL\Application Data\Microsoft\Internet Explorer\Quick Launch\DoSHTTP 2.5.lnk
+Self-Register: E:\Program Files\Common Files\SocketSecure\SocketLicense1.dll
+Self-Register: E:\WINDOWS\system32\MSWINSCK.OCX
+Self-Register: E:\WINDOWS\system32\MSCOMCTL.OCX
+Self-Register: E:\WINDOWS\system32\RICHTX32.OCX
+Could not Self-Register: E:\WINDOWS\system32\riched20.dll
+RegDB Key: SOFTWARE\Socketsoft\DoS-HTTP
+RegDB Val: 2.5.0
+RegDB Name: Version
+RegDB Root: 2
+RegDB Old: 2.5.0
+RegDB Key: SOFTWARE\Socketsoft\DoS-HTTP
+RegDB Val: splash.bmp
+RegDB Name: SplashBitMap
+RegDB Root: 2
+RegDB Key: SOFTWARE\Socketsoft\DoS-HTTP
+RegDB Val: 1
+RegDB Name: Update
+RegDB Root: 2
+RegDB Old: 1
+User Rights: Admin

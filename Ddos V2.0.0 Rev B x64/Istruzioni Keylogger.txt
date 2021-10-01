@@ -1,0 +1,22 @@
+Benvenuto nelle istruzioni del Keylogger by Hotelfico.
+
+In poche semplici mosse preparerai il tuo keylogger Remoto!
+
+Istruzioni:
+
+
+1)Apri il Ddos e Spostati nella scheda Keylogger (scarica il keylogger)
+
+
+2)Spostati nella Scheda Per settare l'email, scrivi l'email e salva (dai un nome qualsiasi il file verrà salvato 
+come Config.txt nella directory del Ddos)
+
+
+3)Copia il file Config.txt nella Cartella del Keylogger
+
+
+4)Nascondi il file Config.txt e Invia la cartella alla vittima :D
+
+
+
+I log arriveranno alla tua email con un intervallo di 5 minuti...

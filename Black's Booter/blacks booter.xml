@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+blacksbooter
+</name>
+</assembly>
+<members>
+<member name="P:booter.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:booter.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:booter.My.Resources.Resources.how_to_make_it_move_custom_gui">
+	<summary>
+  Looks up a localized string similar to Top of code. (Before all private subs but after public class)
+ 
+Dim NewPoint As New System.Drawing.Point()
+Dim X, Y As Integer
+
+
+Titlebar Mouse Down Event
+
+X = Control.MousePosition.X - Me.Location.X
+Y = Control.MousePosition.Y - Me.Location.Y
+http://www.youtube.com/watch?v=9UiF5nkHXp4
+ 
+
+
+
+Titlebar Mouse Move Event
+
+If e.Button = MouseButtons.Left Then
+    NewPoint = Control.MousePosition
+    NewPoint.X -= (X)
+    NewPoint.Y -= (Y)
+    Me.Location = NewPoint
+End If.
+</summary>
+</member><member name="P:booter.My.Resources.Resources.pics">
+	<summary>
+  Looks up a localized string similar to .
+</summary>
+</member><member name="T:booter.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,1 @@
+Se all'apertura del file c'è un errore, mettete il file mswinsck.ocx nel system32, cioè C:\WINDOWS\system32
