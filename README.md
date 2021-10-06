@@ -4,4 +4,4 @@
 IF YOU WANT DOWNLOAD ALL FILES NOT IN PART USE THIS LINK
 https://www.mediafire.com/file/gxpvmb31gxizvvj/Hacking_Software.7z/file
 
-for password contact me econan419@gmail.com
+for password archive contact me on email econan419@gmail.com
