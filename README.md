@@ -1,4 +1,7 @@
-# H4CK1N6-S0FTW4R3
+# Hacking Software For Windows
+
+WARNING!!!  
+This video is made for educational purposes only, not for a crime.  I am not responsible for the misuse of this tool and risks that occur in the next future ...
 
 
 IF YOU WANT DOWNLOAD ALL FILES NOT IN PART USE THIS LINK
