@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<exclusive>
+  <UsersOnline>100</UsersOnline>
+  <UsersCount>123</UsersCount>
+  <Message>Hello world!</Message>
+  <Username>Exclusive</Username>
+  <Points>666</Points>
+  <UnlimitedTime>true</UnlimitedTime>
+  <UpdateAvailable>false</UpdateAvailable>
+  <GUID>E95A4DDE6BB97BE4AE8954BB715138FA</GUID>
+  <variables>
+    <variable name='1'>dd/mm/yy</variable>
+    <variable name='2'>1</variable>
+    <variable name='3'>name</variable>
+  </variables>
+</exclusive>
