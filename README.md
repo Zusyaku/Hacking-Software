@@ -3,6 +3,7 @@
 WARNING!!!  
 This is made for educational purposes only, not for a crime.  I am not responsible for the misuse of this tool and risks that occur in the next future ...
 
+# I Recomended You Download From Github Because This Repsitory Always Update 
 
 IF YOU WANT DOWNLOAD ALL FILES NOT IN PART USE THIS LINK
 https://www.mediafire.com/file/gxpvmb31gxizvvj/Hacking_Software.7z/file
